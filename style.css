@@ -1,3 +1,11 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
+
+:root {
+    --primaryColor: #FBBF57;
+    --primary-font-family: 'Sedgwick Ave', cursive;
+}
+
 .header-nav {
     background-color: transparent;
     display: flex;
@@ -13,4 +21,28 @@
 
 .nav-link {
     font-size: 22px;
+}
+
+/* Hero Section Background Image */
+
+#hero {
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("images/pizza.png");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.hero-t {
+    font-family: var(--primary-font-family);
+}
+
+.pizza {
+    font-size: 64px;
+    font-family: var(--primary-font-family);
+    margin-top: 30px;
+}
+
+.color {
+    color: var(--primaryColor);
 }

@@ -1,0 +1,16 @@
+.header-nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-link {
+    font-size: 22px;
+}

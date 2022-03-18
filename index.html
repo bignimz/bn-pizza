@@ -18,7 +18,7 @@
     <header class="header container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light header-nav">
             <div class="container-fluid space-bwtn">
-                <a class="navbar-brand" href="#"><img src="images/bn-pizza-logo-dark.png" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="images/bn-pizza-logo-dark.png" alt="" class="logo-img"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,16 +35,94 @@
 
      <!-- Hero Section -->
     <section class="bg-dark text-secondary px-4 py-5 text-center" id="hero">
-        <div class="py-5">
+        <div class="py-5 m">
             <h1 class="display-5 fw-bold text-white hero-t">Tasty, Healthy & Delicious</h1>
             <h2 class="display-5 fw-bold text-white pizza"><span class="color">PIZZA</span></h2>
-            <!-- <div class="col-lg-6 mx-auto">
-                <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
-                <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+            <h3 class="text-white mt-5">Select Menu Below</h3>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="container" id="menu">
+        <div class="fluid-container py-4 px-5 menu-wrapper">
+            <div class="fluid-container card-wrapper">
+                <div class="row align-items-center justify-content-between">
+                    <div class="card my-3 col-md-4">
+                        <h5 class="card-title text-center">Pizza</h5>
+                        <img src="images/pizza.png" class="card-img-top text-center" alt="...">
+                        <div class="card-body">
+                            <select name="pizzas" id="pizzas" class="text-center">
+                                <option value="0" selected>Choose Pizza Size</option>
+                                <option value="small" class="option">Small</option>
+                                <option value="medium" class="option">Medium</option>
+                                <option value="Large" class="option">Large</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="card my-3 col-md-4">
+                        <h5 class="card-title text-center">Crust</h5>
+                        <img src="images/crust.png" class="card-img-top text-center" alt="...">
+                        <div class="card-body">
+                            <select name="pizzas" id="pizzas" class="text-center">
+                                <option value="0" selected>Choose Crust</option>
+                                <option value="small" class="option">Crispy</option>
+                                <option value="medium" class="option">Stuffed</option>
+                                <option value="Large" class="option">Gluten-free</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="card my-3 col-md-4">
+                        <h5 class="card-title text-center">Toppings</h5>
+                        <img src="images/pizza-png-15.png" class="card-img-top text-center" alt="...">
+                        <div class="card-body">
+                            <select name="pizzas" id="pizzas" class="text-center">
+                                <option value="0" selected>Choose Toppings</option>
+                                <option value="small" class="option">Pepperoni</option>
+                                <option value="medium" class="option">Cheese</option>
+                                <option value="Large" class="option">Mushrooms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <button class="submit">Place Order</button>
+                    </div>
+
+                    <!-- Results Section -->
+                    <section class="results">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Pizza Size</th>
+                                <th scope="col">Crust</th>
+                                <th scope="col">Toppings</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </section>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
     

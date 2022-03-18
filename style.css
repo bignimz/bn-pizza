@@ -6,6 +6,13 @@
     --primary-font-family: 'Sedgwick Ave', cursive;
 }
 
+body {
+    background-image:linear-gradient(to bottom, rgba(189, 189, 189, 0.7), rgb(197, 197, 197)), url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .header-nav {
     background-color: transparent;
     display: flex;
@@ -18,6 +25,10 @@
     align-items: center;
 }
 
+.logo-img {
+    width: 160px;
+}
+
 
 .nav-link {
     font-size: 22px;
@@ -26,7 +37,8 @@
 /* Hero Section Background Image */
 
 #hero {
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("images/pizza.png");
+    height: 70vh;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0, 0, 0, 1)), url("images/pizza.png");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,4 +57,71 @@
 
 .color {
     color: var(--primaryColor);
+}
+
+/* Menu Section */
+
+.menu-wrapper {
+    width: 100%;
+    position: relative;
+    top: -50px;
+    background-color: #222;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.menu-heading {
+    color: white;
+    text-transform: uppercase;
+}
+
+.card {
+    gap: 5px;
+}
+
+.card-img-top {
+    max-width: 100%;
+    width: 220px;
+    max-height: auto;
+    height: 220px;
+    margin: auto;
+}
+
+#pizzas {
+    max-width: 100%;
+    width: 300px;
+    padding: 15px;
+}
+
+.option {
+    max-width: 100%;
+    width: 200px;
+    padding: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.submit {
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.submit:hover {
+    background-color: #ffa811;
+}
+
+/* Results Section */
+
+.results {
+    background-color: white;
+    border-radius: 5px;
 }

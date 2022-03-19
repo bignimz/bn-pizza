@@ -16,7 +16,7 @@
 <body>
     <!-- Header Section -->
     <header class="header container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light header-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent align-items-center header-nav">
             <div class="container-fluid space-bwtn">
                 <a class="navbar-brand" href="#"><img src="images/bn-pizza-logo-dark.png" alt="" class="logo-img"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
         <div class="py-5 m">
             <h1 class="display-5 fw-bold text-white hero-t">Tasty, Healthy & Delicious</h1>
             <h2 class="display-5 fw-bold text-white pizza"><span class="color">PIZZA</span></h2>
-            <h3 class="text-white mt-5">Select Menu Below</h3>
+            <h3 class="text-white mt-5 menu-select">Select Your Pizza</h3>
         </div>
     </section>
 
@@ -47,33 +47,33 @@
         <div class="fluid-container py-4 px-5 menu-wrapper">
             <div class="fluid-container card-wrapper">
                 <div class="row align-items-center justify-content-between">
-                    <div class="card my-3 col-md-4">
-                        <h5 class="card-title text-center">Pizza</h5>
+                    <div class="card my-3 col-md-5 col-lg-3 py-3">
+                        <h5 class="card-title text-center menu-title">Pizza</h5>
                         <img src="images/pizza.png" class="card-img-top text-center" alt="...">
                         <div class="card-body">
                             <select name="pizzas" id="pizzas" class="text-center">
                                 <option value="0" selected>Choose Pizza Size</option>
-                                <option value="small" class="option">Small</option>
-                                <option value="medium" class="option">Medium</option>
-                                <option value="Large" class="option">Large</option>
+                                <option value="small" class="option">Small @ 450</option>
+                                <option value="medium" class="option">Medium @ 750</option>
+                                <option value="Large" class="option">Large @ 950</option>
                             </select>
                         </div>
                     </div>
     
-                    <div class="card my-3 col-md-4">
+                    <div class="card my-3 col-md-5 col-lg-3 py-3">
                         <h5 class="card-title text-center">Crust</h5>
                         <img src="images/crust.png" class="card-img-top text-center" alt="...">
                         <div class="card-body">
                             <select name="pizzas" id="pizzas" class="text-center">
                                 <option value="0" selected>Choose Crust</option>
-                                <option value="small" class="option">Crispy</option>
-                                <option value="medium" class="option">Stuffed</option>
-                                <option value="Large" class="option">Gluten-free</option>
+                                <option value="small" class="option">Crispy @ 200</option>
+                                <option value="medium" class="option">Stuffed @ 300</option>
+                                <option value="Large" class="option">Gluten-free @ 150</option>
                             </select>
                         </div>
                     </div>
     
-                    <div class="card my-3 col-md-4">
+                    <div class="card my-3 col-md-5 col-lg-3 py-3">
                         <h5 class="card-title text-center">Toppings</h5>
                         <img src="images/pizza-png-15.png" class="card-img-top text-center" alt="...">
                         <div class="card-body">
@@ -86,11 +86,11 @@
                         </div>
                     </div>
                     <div class="submit-btn">
-                        <button class="submit">Place Order</button>
+                        <button class="submit" id="order">Place Order</button>
                     </div>
 
                     <!-- Results Section -->
-                    <section class="results">
+                    <section class="results overflow-scroll" id="result">
                         <table class="table">
                             <thead>
                               <tr>
@@ -98,14 +98,20 @@
                                 <th scope="col">Pizza Size</th>
                                 <th scope="col">Crust</th>
                                 <th scope="col">Toppings</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Totals</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>Small @ 550</td>
+                                <td>Crispy @ 200</td>
+                                <td>Mushrooms @ S300</td>
+                                <td><span class="qty"></span><button onclick="increment()">+</button>
+                                    <button onclick="decrement()">-</button>
+                                </td>
+                                <td id="totals">Ksh1050</td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
@@ -128,6 +134,8 @@
     
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Custom JS -->
     <script src="main.js"></script>
 </body>

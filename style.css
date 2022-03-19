@@ -7,10 +7,16 @@
 }
 
 body {
-    /* background-image:linear-gradient(to bottom, rgba(189, 189, 189, 0.7), rgb(197, 197, 197)), url("images/background.png"); */
+    background-image:linear-gradient(to bottom, rgba(241, 241, 241, 0.7), rgb(235, 235, 235)), url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    background-color: white;
 }
 
 .header-nav {
@@ -18,8 +24,29 @@ body {
 }
 
 .logo-nav {
-    display: flex;
+    position: relative;
+    right: 0;
+    font-family: var(--primary-font-family);
     align-items: center;
+}
+
+.navbar-brand {
+    margin-right: 100px;
+}
+
+.logo-nav a {
+    margin-right: 30px;
+    margin-top: 20px;
+    font-size: 26px;
+} 
+
+.logo-nav a:hover {
+    color: var(--primaryColor);
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
 }
 
 .logo-img {
@@ -61,7 +88,7 @@ body {
 .menu-wrapper {
     width: 100%;
     position: relative;
-    top: -50px;
+    top: -80px;
     background-color: #222;
     z-index: 10;
     border-radius: 10px;
@@ -75,7 +102,7 @@ body {
 .menu-select {
     position: relative;
     top: 80px;
-    font-size: 46px;
+    font-size: 42px;
     text-transform: uppercase;
 }
 
@@ -113,6 +140,7 @@ body {
     text-align: center;
 }
 
+/* Order Button */
 .submit {
     background-color: var(--primaryColor);
     color: white;
@@ -128,6 +156,37 @@ body {
     background-color: #ffa811;
 }
 
+/* Add More Button */
+#addMore {
+    display: none;
+}
+
+/* Done Button */
+.done {
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* Address */
+.address {
+    display: none;
+}
+
+#addressAdd {
+    background-color: var(--primaryColor);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
 /* Results Section */
 
 .results {
@@ -138,4 +197,41 @@ body {
 
 .qty {
     margin-right: 10px;
+}
+
+/* Add Address */
+#address {
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #444;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#address:focus {
+    border: none;
+    border-bottom: 1px solid #444;
+}
+
+.address-results {
+    display: none;
+}
+
+/* Checkout */
+.checkout {
+    text-align: right;
+}
+
+.checkout-btn {
+    display: none;
+}
+
+
+/* Contact Section */
+
+.contact img {
+    width: 140px;
+    max-width: 100%;
 }

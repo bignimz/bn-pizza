@@ -17,7 +17,7 @@
     <!-- Header Section -->
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent align-items-center container">
-            <div class="container-fluid space-bwtn">
+            <div class="container-fluid align-items-center">
                 <a class="navbar-brand" href="#"><img src="images/bn-pizza-logo-dark.png" alt="" class="logo-img"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
         <div class="py-5 m">
             <h1 class="display-5 fw-bold text-white hero-t">Tasty, Healthy & Delicious</h1>
             <h2 class="display-5 fw-bold text-white pizza"><span class="color">PIZZA</span></h2>
-            <h3 class="text-white mt-5 menu-select">Select Your Pizza</h3>
+            <h3 class="text-white mt-5 menu-select">Place Your Order</h3>
         </div>
     </section>
 
@@ -49,83 +49,82 @@
                 <div class="row align-items-center justify-content-between xl-fluid-container">
                     <div class="card my-3 col-md-5 col-lg-3 py-3">
                         <h5 class="card-title text-center menu-title">Pizza</h5>
-                        <img src="images/pizza.png" class="card-img-top text-center" alt="...">
+                        <img src="images/pizza.png" class="card-img-top text-center img-fluid" alt="...">
                         <div class="card-body">
-                            <select name="pizzas" id="pizzas" class="text-center">
+                            <select name="pizzas" id="pizzas" class="text-center pizza-size" required>
                                 <option value="0" selected>Choose Pizza Size</option>
-                                <option value="small" class="option">Small @ 450</option>
-                                <option value="medium" class="option">Medium @ 750</option>
-                                <option value="Large" class="option">Large @ 950</option>
+                                <option label="Small" value="450" class="option">Small</option>
+                                <option label="Medium" value="750" class="option">Medium</option>
+                                <option label="Large" value="950" class="option">Large</option>
                             </select>
                         </div>
                     </div>
     
                     <div class="card my-3 col-md-5 col-lg-3 py-3">
                         <h5 class="card-title text-center">Crust</h5>
-                        <img src="images/crust.png" class="card-img-top text-center" alt="...">
+                        <img src="images/crust.png" class="card-img-top text-center img-fluid" alt="...">
                         <div class="card-body">
-                            <select name="pizzas" id="pizzas" class="text-center">
+                            <select name="pizzas" id="pizzas" class="text-center crust" required>
                                 <option value="0" selected>Choose Crust</option>
-                                <option value="small" class="option">Crispy @ 200</option>
-                                <option value="medium" class="option">Stuffed @ 300</option>
-                                <option value="Large" class="option">Gluten-free @ 150</option>
+                                <option label="crispy" value="200" class="option">Crispy</option>
+                                <option label="stuffed" value="300" class="option">Stuffed</option>
+                                <option label="gluten-free" value="150" class="option">Gluten-free</option>
                             </select>
                         </div>
                     </div>
     
                     <div class="card my-3 col-md-5 col-lg-3 py-3">
                         <h5 class="card-title text-center">Toppings</h5>
-                        <img src="images/pizza-png-15.png" class="card-img-top text-center" alt="...">
+                        <img src="images/pizza-png-15.png" class="card-img-top text-center img-fluid" alt="...">
                         <div class="card-body">
-                            <select name="pizzas" id="pizzas" class="text-center">
+                            <select name="pizzas" id="pizzas" class="text-center toppings" required>
                                 <option value="0" selected>Choose Toppings</option>
-                                <option value="small" class="option">Pepperoni</option>
-                                <option value="medium" class="option">Cheese</option>
-                                <option value="Large" class="option">Mushrooms</option>
+                                <option label="Pepperoni" value="100" class="option">Pepperoni</option>
+                                <option label="Cheese" value="150" class="option">Cheese</option>
+                                <option label="Mushrooms" value="200" class="option">Mushrooms</option>
                             </select>
                         </div>
                     </div>
                     <div class="submit-btn">
                         <button class="submit" id="order">Place Order</button>
+                        <button class="submit" id="addMore">Order More</button>
                     </div>
 
                     <!-- Results Section -->
                     <section class="results overflow-scroll" id="result">
                         <table class="table">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Pizza Size</th>
-                                <th scope="col">Crust</th>
-                                <th scope="col">Toppings</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Totals</th>
-                              </tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Pizza Size</th>
+                                    <th scope="col">Crust</th>
+                                    <th scope="col">Toppings</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Totals</th>
+                                </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Small @ 550</td>
-                                <td>Crispy @ 200</td>
-                                <td>Mushrooms @ S300</td>
-                                <td><span class="qty"></span><button onclick="increment()">+</button>
-                                    <button onclick="decrement()">-</button>
-                                </td>
-                                <td id="totals">Ksh1050</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td id="size"></td>
+                                    <td id="crust"></td>
+                                    <td id="toppings"></td>
+                                    <td><span class="qty"></span><button onclick="increment()">+</button>
+                                        <button onclick="decrement()">-</button>
+                                    </td>
+                                    <td id="totals"></td>
+                                </tr>
                             </tbody>
-                          </table>
+                        </table>
+                        <!-- Done Button -->
+                        <button class="done" id="done">Done</button>
+                        <span class="address"><input type="text" id="address" placeholder="Enter Delivery address, charges may apply"><button id="addressAdd">Add</button></span>
+                        <p class="address-results">Your Order will be delivered to <span class="location"></span></p>
+                        <p class="g-total fw-bold float-right align-items-right"></p>
+                        <!-- Checkout Button -->
+                        <div class="checkout">
+                            <button class="checkout-btn my-2 mx-2 btn btn-success" id="checkout">Proceed To Checkout</button>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -136,8 +135,9 @@
     <footer class="footer bg-dark py-3 mt-5">
         <div class="container text-center contact">
             <img src="images/bignim-pizza-logo-white.png" alt="">
-            <p class="lead hours text-white mt-3">Open: 24/7 Mon - Fri</p>
+            <p class="lead hours text-white mt-3">Open: 24/7 Monday - Sunday</p>
             <p class="lead contact text-white">Contact Us: 0700 123456</p>
+            <!-- <p class="lead text-white">Developed by: Nimrod Musungu</p> -->
         </div>
     </footer>
     

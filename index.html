@@ -24,7 +24,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav logo-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         <a class="nav-link" href="#menu">Menu</a>
                         <a class="nav-link" href="#contact">Contact</a>
                     </div>
@@ -103,9 +103,9 @@
                                     <th scope="col">Totals</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="resultsRow">
                                 <tr>
-                                    <th scope="row"></th>
+                                    <th scope="row">1</th>
                                     <td id="size"></td>
                                     <td id="crust"></td>
                                     <td id="toppings"></td>
@@ -119,7 +119,7 @@
                         <!-- Done Button -->
                         <button class="done" id="done">Done</button>
                         <span class="address"><input type="text" id="address" placeholder="Enter Delivery address, charges may apply"><button id="addressAdd">Add</button></span>
-                        <p class="address-results">Your Order will be delivered to <span class="location"></span></p>
+                        <p class="address-results lead fw-bold">Your Order will be delivered to <span class="location"></span></p>
                         <p class="g-total fw-bold float-right align-items-right"></p>
                         <!-- Checkout Button -->
                         <div class="checkout">
@@ -130,6 +130,24 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Form -->
+    <div class="overlay"></div>
+    <div class="checkout-modal px-2" id="checkoutForm">
+        <div class="modal-body">
+            <div class="left col-4">
+
+            </div>
+            <div class="right col-8">
+                <img src="images/bn-pizza-logo-dark.png" alt="" class="img-fluid">
+                <p class="lead alert-success mt-3 py-2 px-2">Your Order Has Been Placed Successfully!</p>
+                <p class="lead fw-bold">Delivery Location: <span class="del-location fw-bold"></span></p>
+                <p class="lead fw-bold">Total Bill: <span class="del-bill fw-bold"></span></p>
+                <p class="lead fw-bold">Payment Mode:</p><span class="pay-mode fw-bold">Cash On Delivery</span> 
+                <button class="btn btn-success" id="ok">OK</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Section -->
     <footer class="footer bg-dark py-3 mt-5">

@@ -219,6 +219,13 @@ body {
     display: none;
 }
 
+.g-total {
+    float: right;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+
 /* Checkout */
 .checkout {
     text-align: right;
@@ -227,6 +234,53 @@ body {
 .checkout-btn {
     display: none;
 }
+
+/* Modal Form */
+.modal-body {
+    width: 600px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    display: flex;
+
+}
+
+.checkout-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: 11;
+    display: none;
+}
+
+.left {
+    background-image: url("images/modal-img.jpg");
+    background-position: right;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
 
 
 /* Contact Section */

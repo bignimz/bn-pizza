@@ -50,20 +50,21 @@
             console.log($(pizzaSize).html());
         })
 
-        // When Ok button on the modal is clicked
-        $('#ok').click(function(){
+        // Function that hides the modal and reset the order results
+
+        const hideDetails = function(){
             $('.overlay').toggle('hide');
             $('#checkoutForm').toggle('hide');
             $('#checkout').hide();
             $('.address-results').hide();
             $('.g-total').hide();
-        })
+        }
+
+        // When Ok button on the modal is clicked
+        $('#ok').click(hideDetails)
 
          // When overlay is clicked
-        $('.overlay').click(function(){
-            $('.overlay').toggle('hide');
-            $('#checkoutForm').toggle('hide');
-        })
+        $('.overlay').click(hideDetails)
     })
 
        
@@ -90,21 +91,21 @@
         $('.g-total').html(`Total Bill: ${grandTotal + total}`);
 
         // Pizza Constructor Function
-        function Pizza(orderNo, size, crust, toppings, total) {
-            this.orderNo = orderNo;
+        function Pizza(size, crust, toppings, total, orderNo) {
             this.size = size;
             this.toppings = toppings;
             this.crust = crust;
             this.total = total;
+            this.orderNo = orderNo;
           }
 
-        let orderNew = new Pizza(order, pizzaSize, pizzaCrust, pizzaToppings, total);
+        let orderNew = new Pizza(pizzaSize, pizzaCrust, pizzaToppings, total, order);
 
         let newRow = '<tr><th scope="row">' + orderNew.orderNo  + '</th><td id="size">' + $(pizzaSize).text() + " - " + orderNew.size + '</td><td id="crust">' + $(pizzaCrust).text() + " - " + orderNew.pizzaCrust + '</td><td id="toppings">' + $(pizzaToppings).text() + " - " + orderNew.pizzaToppings + '</td><td id="total">' + orderNew.total + '</td></tr>'
 
         $(".resultsRow").append(newRow);
 
-    })
+    });
 
 
     const pizzaValue = function(){
@@ -114,7 +115,6 @@
         let total = parseInt(pizzaSize) + parseInt(pizzaToppings) + parseInt(pizzaCrust);
         return total;
     }
-}
 
 let totalCounter = $('.qty');
 let count = 1;
@@ -126,7 +126,7 @@ function increment(){
     grandTotal += pizzaValue();
     $(totalCounter).html(count);
     $("#totals").html(pizzaValue() * count);
-    $(".g-total").text(grandTotal += pizzaValue());
+    $(".g-total").html(`Total Bill: ${grandTotal + pizzaValue() + 200}`);
     
 }
 
@@ -142,7 +142,7 @@ function decrement(){
         }else {return count * 1 - 1} 
     });
 
-    
+} 
 // orderPizza();
 
     

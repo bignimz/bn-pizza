@@ -4,7 +4,7 @@ This is a web application for a pizza business that allows users to place their 
 
 ## Project Design Preview
 
-<!-- ![Project design preview](assets/delani-studio.jpg) -->
+![Project design preview](images/BigNim%20Pizza.jpg)
 
 ## Author
 
